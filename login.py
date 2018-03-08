@@ -1,10 +1,20 @@
-from flask import Flask
+from flask import Flask, render_template, request
+import dataset
+
 app = Flask(__name__)
+db = dataset.connect('sqlite:///:memory:')
+table = db['logins']
 
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return render_template("login.html")
+
+
+@app.route("/login", methods=["POST"])
+def login():
+    return render_template("login.html", message="bad credentials")
+
 
 if __name__ == '__main__':
-	app.run()
+    app.run()
