@@ -1,10 +1,9 @@
 # bad login system
 
-http://pythonhosted.org/itsdangerous/
-https://pythonhosted.org/Flask-Security/
-http://hax.tor.hu
-https://www.hackthissite.org/
-
+ -  http://pythonhosted.org/itsdangerous/
+ -  https://pythonhosted.org/Flask-Security/
+ -  http://hax.tor.hu
+ -  https://www.hackthissite.org/
 
 ```shell
 # win
