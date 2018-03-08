@@ -13,7 +13,8 @@ def hello():
 
 @app.route("/login", methods=["POST"])
 def login():
-    return success("dwa") if validate(request.form) else bad_credentials()
+    credentials = request.form.to_dict()
+    return success(credentials["username"]) if validate(credentials) else bad_credentials()
 
 
 def success(username):
@@ -25,8 +26,12 @@ def bad_credentials():
 
 
 def validate(credentials):
-    return True
+    return credentials["password"] == get_password(credentials["username"])
 
+
+def get_password(name):
+    user = table.find_one(username=name)
+    return user["password"] if user else False
 
 if __name__ == '__main__':
     table.insert({"username": "admin", "password": "alma"})
