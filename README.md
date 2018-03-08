@@ -1,6 +1,6 @@
 # bad login system
 
-A very unsecure login site based on Flask & Jinja2.
+A very non-secure login site based on Flask & Jinja2.
 
 Made in 60 minutes, only for presentation purpose.
 
