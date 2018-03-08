@@ -1,5 +1,11 @@
 # bad login system
 
+A very unsecure login site based on Flask & Jinja2.
+
+Made in 60 minutes, only for presentation purpose.
+
+Some useful materials:
+
  -  http://pythonhosted.org/itsdangerous/
  -  https://pythonhosted.org/Flask-Security/
  -  http://hax.tor.hu
