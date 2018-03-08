@@ -13,6 +13,10 @@ def hello():
 
 @app.route("/login", methods=["POST"])
 def login():
+    request.form
+    
+
+def bad_credentials():
     return render_template("login.html", message="bad credentials")
 
 
